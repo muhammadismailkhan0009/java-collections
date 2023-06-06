@@ -10,12 +10,13 @@ public class ArrayListType {
     }
 
     public static void addElements() {
+        
         List<Integer> list = new ArrayList<>();
         list.add(5);// adds elements in given order
         list.add(3);
         printArrayListElements("output1:",list);
         
-        list.add(2,6);// adds element at given index(question: can we add element at index 3 instead of 2?)
+        list.add(2,6);// adds element at specific index
         printArrayListElements("output2:",list);
         
         list.addAll(List.of(10, 11, 20));// adds elements of given list at end of list
