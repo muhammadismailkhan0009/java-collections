@@ -6,7 +6,8 @@ import java.util.List;
 public class ArrayListType {
 
     public static void main(String[] args) {
-        addElements();
+        // addElements();
+        removeElements();
     }
 
     public static void addElements() {
@@ -24,6 +25,22 @@ public class ArrayListType {
         
         list.addAll(2, List.of(100,200));// adds elements of given list at specific index
         printArrayListElements("output4:", list);
+    }
+
+    public static void removeElements(){
+        List<Integer> list = new ArrayList<>();
+        list.addAll(List.of(1,2,10,11,100,200));
+
+        list.remove(0);//removes element at given index
+        printArrayListElements("output1:",list);
+        
+        list.remove(Integer.valueOf(10));//removes value if it exists in list
+        printArrayListElements("output2:",list);
+
+        list.removeAll(List.of(100,200));//removes all values if they exist in list
+        printArrayListElements("output3:",list);
+        
+       
     }
 
     public static <T> void printArrayListElements(String someString, List<T> list) {
